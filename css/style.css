@@ -1,0 +1,178 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#loadingText {
+  font-size: 24px;
+  color: #444;
+}
+
+#startScreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #fff;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9998;
+  clip-path: circle(150% at 50% 50%);
+  transition: clip-path 1s ease-in-out;
+}
+
+#startScreen.hide {
+  clip-path: circle(0% at 50% 50%);
+}
+
+#snakeIcon {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#startText {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#gameScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+}
+
+#gameScreen h1 {
+  margin-top: 20px;
+}
+
+#score {
+  font-size: 24px;
+  margin: 10px;
+}
+
+#highScoreDisplay {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#gameCanvas {
+  background-color: #eee;
+  border: 2px solid #444;
+  display: block;
+  margin: 20px auto;
+}
+
+#languageContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+#settingsIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  z-index: 9999;
+}
+
+#settingsIcon:hover {
+  opacity: 1;
+}
+
+#settingsPanel {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 250px;
+  background: #444;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+#settingsPanel h2 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.setting-group {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.setting-group label {
+  margin-left: 5px;
+}
+
+#saveSettingsBtn {
+  width: 100%;
+  padding: 8px;
+  background: #00bfff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark-theme {
+  background: #333 !important;
+  color: #eee !important;
+}
+
+.dark-theme #loadingScreen {
+  background: #333;
+}
+
+.dark-theme #loadingText {
+  color: #fff;
+}
+
+.dark-theme #startScreen {
+  background: #000;
+}
+
+.dark-theme #settingsPanel {
+  background: #222;
+}
+
+.dark-theme #gameCanvas {
+  background: #555;
+}
+
+.dark-theme #highScoreDisplay {
+  color: #eee;
+}

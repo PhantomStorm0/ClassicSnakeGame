@@ -38,6 +38,26 @@ window.translations = {
       hard: "Zor",
       classic: "Aydınlık",
       dark: "Karanlık"
+    },
+    kr: {
+      loadingText: "",
+      startText: "",
+      title: "",
+      score: "",
+      highScore: "",
+      settingsTitle: "",
+      difficultyLabel: "",
+      themeLabel: "",
+      wallsLabel: "",
+      obstaclesLabel: "",
+      obstacleCountLabel: "",
+      saveSettings: "",
+      gameOver: "",
+      easy: "",
+      normal: "",
+      hard: "",
+      classic: "",
+      dark: ""
     }
   };
   

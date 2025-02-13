@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="loadingScreen">
+    <div id="loadingText">Loading...</div>
+  </div>
+
+  <div id="startScreen">
+    <img src="image/snake.png" alt="Snake Icon" id="snakeIcon" />
+    <p id="startText">Press any key to start...</p>
+  </div>
+
+  <div id="gameScreen">
+    <h1 id="titleText">Classic Snake Game</h1>
+    <div id="score">Score: 0</div>
+    <div id="highScoreDisplay">High Score: 0</div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div id="languageContainer">
+      <label for="languageSelect">Language:</label>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
+
+    <img src="image/gear.png" alt="Settings" id="settingsIcon" title="Settings" />
+
+    <div id="settingsPanel">
+      <h2 id="settingsTitle">Settings</h2>
+
+      <div class="setting-group">
+        <label for="difficultySelect" id="difficultyLabel">Difficulty:</label>
+        <select id="difficultySelect">
+          <option value="easy" id="easyOption">Easy</option>
+          <option value="normal" id="normalOption" selected>Normal</option>
+          <option value="hard" id="hardOption">Hard</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label for="themeSelect" id="themeLabel">Theme:</label>
+        <select id="themeSelect">
+          <option value="classic" id="classicOption" selected>Light</option>
+          <option value="dark" id="darkOption">Dark</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <input type="checkbox" id="wallsCheck" checked />
+        <label for="wallsCheck" id="wallsLabel">Walls</label>
+      </div>
+
+      <div class="setting-group">
+        <input type="checkbox" id="obstaclesCheck" />
+        <label for="obstaclesCheck" id="obstaclesLabel">Obstacles</label>
+      </div>
+
+      <div class="setting-group" id="obstacleCountGroup" style="display: none;">
+        <label for="obstacleCountInput" id="obstacleCountLabel">Number of obstacles (1-10):</label>
+        <input 
+          type="number" 
+          id="obstacleCountInput" 
+          min="1" 
+          max="10" 
+          value="3" 
+        />
+      </div>
+
+      <button id="saveSettingsBtn">Save</button>
+    </div>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
